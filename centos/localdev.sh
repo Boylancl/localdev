@@ -19,4 +19,4 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(aws background_jobs time)
 export PATH=$PATH:$HOME/.pulumi/bin
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval $(pyenv init -)
+eval "$(pyenv init -)"
