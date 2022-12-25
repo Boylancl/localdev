@@ -9,6 +9,8 @@ eval $(ssh-agent -s)
 source ${WORKING_DIR}/functions.sh
 
 # Set Defaults for Github
+git config --global user.email "boylancl@gmail.com"
+git config --global user.name "Clay Boylan"
 GITHUB_SSH_KEY_NAME=~/.ssh/github_ed25519
 github_login
 
