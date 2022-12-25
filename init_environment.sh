@@ -14,6 +14,7 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc && \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && \
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k && \
+curl -sSL https://install.python-poetry.org | python3 && \
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 pyenv install 3.11.1 && \
 pyenv global 3.11.1 && \

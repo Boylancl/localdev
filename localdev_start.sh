@@ -19,6 +19,7 @@ POWERLEVEL9K_VCS_BRANCH_ICON=$'\uF126 '
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(aws background_jobs time)
 
+export PATH="/home/boylancl/.local/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
