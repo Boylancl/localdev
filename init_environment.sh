@@ -18,6 +18,7 @@ curl -sSL https://install.python-poetry.org | python3 && \
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 pyenv install 3.11.1 && \
 pyenv global 3.11.1 && \
+npm i -g @openai/codex && \
 echo "source ${WORKING_DIR}/localdev_start.sh" >> ~/.zshrc && \
 source ~/.zshrc
 
