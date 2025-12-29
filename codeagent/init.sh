@@ -18,7 +18,7 @@ ${WORKING_DIR}/install-brew.sh
 
 echo "===> Install OpenAI Codex"
 chmod +x ${WORKING_DIR}/install-codex-deps.sh
-${WORKING_DIR}/install-codex-deps.sh
+sudo ${WORKING_DIR}/install-codex-deps.sh
 
 echo "===> Install Gemini"
 chmod +x ${WORKING_DIR}/install-gemini-cli.sh
