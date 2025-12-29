@@ -7,6 +7,12 @@ if ! command -v git >/dev/null; then
   sudo apt install -y git
 fi
 
+echo "==> Installing github cli (if missing)"
+if ! command -v gh >/dev/null; then
+  sudo apt update -y
+  sudo apt install -y gh
+fi
+
 echo "==> Installing SSH tooling"
 sudo apt update -y
 sudo apt install -y openssh-client xclip
@@ -80,7 +86,6 @@ if grep -q "successfully authenticated" /tmp/github_ssh_test.log; then
   echo ""
   echo "✅ GitHub SSH authentication successful."
   echo "==> Git configuration complete"
-  git config --global --list
   exit 0
 fi
 
@@ -110,7 +115,6 @@ if grep -q "successfully authenticated" /tmp/github_ssh_test.log; then
   echo ""
   echo "✅ GitHub SSH authentication successful."
   echo "==> Git configuration complete"
-  git config --global --list
   exit 0
 fi
 
