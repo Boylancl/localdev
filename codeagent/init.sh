@@ -2,27 +2,28 @@
 set -euo pipefail
 
 WORKING_DIR="$( cd "$(dirname "$0")" ; pwd -P )"
+SCRIPTS_DIR="${WORKING_DIR}/scripts"
 
 echo "===> Setup Git"
-chmod +x ${WORKING_DIR}/setup-git.sh
-${WORKING_DIR}/setup-git.sh
+chmod +x ${SCRIPTS_DIR}/system/setup-git.sh
+${SCRIPTS_DIR}/system/setup-git.sh
 
 echo "===> Setup zShell"
-chmod +x ${WORKING_DIR}/install-zshell.sh
-${WORKING_DIR}/install-zshell.sh
+chmod +x ${SCRIPTS_DIR}/system/install-zshell.sh
+${SCRIPTS_DIR}/system/install-zshell.sh
 
 echo "===> Install Brew"
-chmod +x ${WORKING_DIR}/install-brew.sh
-${WORKING_DIR}/install-brew.sh
+chmod +x ${SCRIPTS_DIR}/system/install-brew.sh
+${SCRIPTS_DIR}/system/install-brew.sh
 
 
 echo "===> Install OpenAI Codex"
-chmod +x ${WORKING_DIR}/install-codex-deps.sh
-sudo ${WORKING_DIR}/install-codex-deps.sh
+chmod +x ${SCRIPTS_DIR}/agents/install-codex-deps.sh
+sudo ${SCRIPTS_DIR}/agents/install-codex-deps.sh
 
 echo "===> Install Gemini"
-chmod +x ${WORKING_DIR}/install-gemini-cli.sh
-${WORKING_DIR}/install-gemini-cli.sh
+chmod +x ${SCRIPTS_DIR}/agents/install-gemini-cli.sh
+${SCRIPTS_DIR}/agents/install-gemini-cli.sh
 
 echo "===> Install Claude Code"
 curl -fsSL https://claude.ai/install.sh | bash
@@ -30,5 +31,3 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 
 
 source ~/.zshrc
-
-
